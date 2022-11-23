@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	em  { font-weight: bold; 
+		color:cadetblue; 
+	}
+	h1, em { font-family: tahoma, serif, times new roman; 
+		color:seagreen; text-decoration: underline;
+	}
+	span  { font-size: 12pt; 
+		font-family: times new roman, serif; 
+		color:cadetblue;
+		border: 1px solid yellow;
+	}
+	.special  {
+		color: lightgreen;
+		text-align: center;
+	}
+	#firstline{
+		background-color: lightgreen;
+		padding: 20px;
+		text-align: center;
+	}
+	.otherline{
+		background-color: lightyellow;
+		padding: 5px;
+	}
+	.extra span{
+		color: inherit;
+	}
+</style>
+	
+</head>
+
+
+<body>
+	<em><h1 id="firstline">New HTML5 Input Types Demo</h1></em>
+	<div align="center"><em>Since 2022</em></div>
+	<p class="extra" style="color: cadetblue;">This form demonstrates the <span>new HTML5</span> input types and the placeholder, required and autofocus attributes.</p>
+
+	
+	
+		
+		<label class="otherline" class="extra"><span>Color:</span>
+			<input type="color" autofocus />
+			(Hexadecimal code such as #ADD8E6)
+		</label>
+
+	<br>
+	
+
+	<br>
+		<form action="https://example.com">
+			<label class="otherline" class="extra"><span>Birthday:</span>
+				<input type="date" name="bday" />
+				(yyyy-mm-dd)
+			</label>
+		</form>
+	</br>
+	
+
+	
+	<label class="otherline" class="extra"><span>Email:</span>
+		<input type="email" name="email" size="25" maxlength="30" placeholder="name@domain.com" required>
+		(name@domain.com)			
+	</label>
+	
+
+	
+	<form action="action_page.php">
+		<br>
+			<label for="quantity" class="otherline" class="extra"><span>Number:</span></label>
+			<input type="number" id="quantity "name="quantity" min="0" max="7" value="4">
+			(Enter a number between 0 and 7)
+		</br>
+	</form>
+	
+
+	
+	<form action="/action_page.php" method="get">
+		<br>
+			<label for="vol" class="otherline" class="extra"><span>Range:</span></label>
+			0<input type="range" id="vol" name="range" min="0" max="20">20
+		</br>		
+	</form>
+	
+
+	
+	<form action="/action_page.php">
+		<br>
+			<label for="gsearch" class="otherline" class="extra"><span>Search:</span></label>
+			<input type="search" id="search1" name="search1" placeholder="search query" required>
+		</br>
+	</form>
+	
+
+	
+	<form action="/action_page.php">
+		<br>
+			<label for="appt" class="otherline" class="extra"><span>Time:</span></label>
+			<input type="time" id="appt" name="appt"> (hh:mm)
+		</br>
+	</form>
+
+	<br>
+		<img src = "sjphoto.jpg" alt = "sj photo image" width="320" height="220" />
+	</br>
+
+	<br>
+		<input type="submit" name="Submit">
+		<input type="reset" name="Clear">
+	</br>
+</body>
+</html>
