@@ -1,162 +1,115 @@
 <!DOCTYPE html>
 <html>
-<table border="10" width="100%">
+<head>
+<style type="text/css">
+	em  { font-weight: bold; 
+		color:cadetblue; 
+	}
+	h1, em { font-family: tahoma, serif, times new roman; 
+		color:seagreen; text-decoration: underline;
+	}
+	span  { font-size: 12pt; 
+		font-family: times new roman, serif; 
+		color:cadetblue;
+		border: 1px solid yellow;
+	}
+	.special  {
+		color: lightgreen;
+		text-align: center;
+	}
+	#firstline{
+		background-color: lightgreen;
+		padding: 20px;
+		text-align: center;
+	}
+	.otherline{
+		background-color: lightyellow;
+		padding: 5px;
+	}
+	.extra span{
+		color: inherit;
+	}
+</style>
+	
+</head>
 
-		<thead>
-			<style type="text/css">
-				#firsttitle{
-					color: rebeccapurple; 
-				}
-				.secondtitle  {
-					color: slateblue;
-				}
-				.choice  {
-					color: hotpink;
-				}
 
-			</style>
+<body>
+	<em><h1 id="firstline">New HTML5 Input Types Demo</h1></em>
+	<div align="center"><em>Since 2022</em></div>
+	<p class="extra" style="color: cadetblue;">This form demonstrates the <span>new HTML5</span> input types and the placeholder, required and autofocus attributes.</p>
 
-			<tr>
-
-				<div align="right">
-
-					<th colspan="3">
-						<div align="center">
-							<p id="firsttitle">About--111306019</p>
-						</div>
-					</th>
-
-				</div>
-				
-			</tr>
-		</thead>
+	
+	
 		
+		<label class="otherline" class="extra"><span>Color:</span>
+			<input type="color" autofocus />
+			(Hexadecimal code such as #ADD8E6)
+		</label>
 
-	<tbody>
-		<tr>
-			<th rowspan="4">
-				<img src = "personal photo.jpg" alt = "personal photo image" width="160" height="120" />
-				<br>personal photo</br>
-			</th>
-		</tr>
+	<br>
+	
 
-		<tr>		
-			<th colspan="2">
-				<p>
-					<div align="left" >
-						<label class="secondtitle">Name:
-						<input type="text" name="name" size="25" maxlength="30">			
-						</label>
-					</div>
+	<br>
+		<form action="https://example.com">
+			<label class="otherline" class="extra"><span>Birthday:</span>
+				<input type="date" name="bday" />
+				(yyyy-mm-dd)
+			</label>
+		</form>
+	</br>
+	
 
-					<form>
-						<div align="left" class="secondtitle">Gender:
-						<span class="choice">
-						<input type="radio" name="gender" value="Male" >Male
-						<input type="radio" name="gender" value="Female">Female
-						<input type="radio" name="gender" value="Other">Other
-						</span>
-					</form>
-				</p>
-			</th>
-		</tr>
+	
+	<label class="otherline" class="extra"><span>Email:</span>
+		<input type="email" name="email" size="25" maxlength="30" placeholder="name@domain.com" required>
+		(name@domain.com)			
+	</label>
+	
 
-		<tr>
-			<td>
-				<br>
-					<form action="/action_page.php" class="secondtitle">
-					Country:
-						<select name="country">
-							<span class="choice">
-							<option value="taipei">Taipei</option>
-							<option value="tainan">Tainan</option>
-							<option value="taichung">Taichung</option>
-							<option value="taoyuan">Taoyuan</option>
-							</span>
-						</select>
-					</form>
-				</br>
-			</td>
+	
+	<form action="action_page.php">
+		<br>
+			<label for="quantity" class="otherline" class="extra"><span>Number:</span></label>
+			<input type="number" id="quantity "name="quantity" min="0" max="7" value="4">
+			(Enter a number between 0 and 7)
+		</br>
+	</form>
+	
 
-			<td>
-				<br>
-					<form action="https://example.com">
-					  <label class="secondtitle">
-					    Birthday:
-					    <input type="date" name="bday" />
-					  </label>
-					</form></br></td>
-		</tr>
+	
+	<form action="/action_page.php" method="get">
+		<br>
+			<label for="vol" class="otherline" class="extra"><span>Range:</span></label>
+			0<input type="range" id="vol" name="range" min="0" max="20">20
+		</br>		
+	</form>
+	
 
-		<tr>
-			<th colspan="3">
-				<br>
-					<div align="left" >
-						<label class="secondtitle">Email:
-							<input type="text" name="name" size="25" maxlength="30">			
-						</label>
-					</div>
-				</br>
-			</th>
-		</tr>
+	
+	<form action="/action_page.php">
+		<br>
+			<label for="gsearch" class="otherline" class="extra"><span>Search:</span></label>
+			<input type="search" id="search1" name="search1" placeholder="search query" required>
+		</br>
+	</form>
+	
 
-		<tr>
-			<td class="secondtitle">Hobby</td> 
+	
+	<form action="/action_page.php">
+		<br>
+			<label for="appt" class="otherline" class="extra"><span>Time:</span></label>
+			<input type="time" id="appt" name="appt"> (hh:mm)
+		</br>
+	</form>
 
-			<th colspan="3">
-				<br>
-					<div align="left"  class="choice">
-						<form action="/action_page.php" method="get">
-							<input type="checkbox" name="hobby" value="swimming">Swimming
-							<input type="checkbox" name="hobby" value="volleyball">Volleyball
-							<input type="checkbox" name="hobby" value="movie">Movie
-							<input type="checkbox" name="hobby" value="game">Game
-							<input type="checkbox" name="hobby" value="sleep">Sleep
-						</form>
-					</div>
-				</br>
-			</th>
-			
-		</tr>
+	<br>
+		<img src = "sjphoto.jpg" alt = "sj photo image" width="320" height="220" />
+	</br>
 
-		<tr>
-			<td class="secondtitle">Skill</td> 
-				<th colspan="3">
-					<br>
-						<div align="left" class="choice">
-							<form action="/action_page.php" method="get">
-								<input type="checkbox" name="skill" value="java">Java
-								<input type="checkbox" name="skill" value="html">HTML
-								<input type="checkbox" name="skill" value="python">Python
-								<input type="checkbox" name="skill" value="microsoft office">Microsoft Office
-								<input type="checkbox" name="skill" value="premiere">Premiere
-							</form>
-						</div>
-					</br>
-				</th>
-			</td>
-		</tr>
-
-		<tr>
-			<td class="secondtitle">Say Something</td>
-			<td>
-				<textarea rows="1" cols=40" class="choice">
-Say something here.
-				</textarea>
-			</td>
-		</tr>
-
-		<tr>	
-			<th colspan="4">
-				<p>
-					<div align="left" >
-						<input type="submit" name="Submit">
-						<input type="reset" name="Clear">
-					</div>
-				</p>
-			</th>
-		</tr>
-
-	</tbody>
-</table>
+	<br>
+		<input type="submit" name="Submit">
+		<input type="reset" name="Clear">
+	</br>
+</body>
 </html>
