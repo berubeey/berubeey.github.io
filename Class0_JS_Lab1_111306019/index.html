@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+	<input type="button" value="1st number" onClick="alert(name1)">
+	<input type="button" value="2nd number" onClick="alert(name2)">
+
+	<script>
+		var name1 = parseInt(window.prompt("Enter first number"));
+		var name2 = parseInt(window.prompt("Enter second number"));
+		if(name1 > name2){
+			document.writeln(name1+">"+name2);
+			document.body.style.backgroundColor = 'green';
+		}else if(name1 == name2){
+			document.writeln(name1+"="+name2);
+			document.body.style.backgroundColor = 'red';
+		}else{
+			document.writeln(name1+"<"+name2);
+			document.body.style.backgroundColor = 'blue';
+		}
+		
+	</script>
+
+
+</body>
+</html>
